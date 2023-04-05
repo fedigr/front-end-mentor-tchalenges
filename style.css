@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+:root{
+    --Cyan:hsl(180, 66%, 49%);
+    --Dark-Violet:hsl(257,27%,26%);
+    --red:hsl(0,87%,67%);
+   --Gray: hsl(0, 0%, 75%);
+   --Grayish-Violet: hsl(257, 7%, 63%);
+   --Very-Dark-Blue: hsl(255, 11%, 22%);
+   --Very-Dark-Violet: hsl(260, 8%, 14%);
+   --white:white;
+   --light:hsl(0, 0%, 94%);
+   --font-size:16px;
+   --font-family: 'Poppins', sans-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    border: none;
+    font-family: var(--font-family);
+}
+*:active{
+    color:inherit;
+}
+body{
+    font-size: var(--font-size);
+    background-color: var(--light);
+}
+ul{
+    font-weight: 500;
+}
+/*=============Utilities==================*/
+/*button */
+.btn{
+    padding: 0.5rem 0.8rem !important;
+    margin:5px; font-size: inherit;
+     font-weight: inherit;
+     cursor: pointer;
+     width: fit-content;
+     height: fit-content;
+    }
+.btn-Cyan{background-color: var(--Cyan) !important;color: var(--white);}
+.rounded{border-radius: 1.4rem;}
+.rounded-10{border-radius: 10px;}
+/* sizing */
+.w-100{width: 100%;}
+.mt-20{margin-top: 20px;}
+.mt-50{margin-top: 50px;}
+.mt-100{margin-top: 100px;}
+.w-80{width: 80%;}
+.m-none{margin: 0px !important;}
+.m-auto{margin: 0px auto;}
+
+/*==========TEXT============*/
+.txt-center{text-align: center;}
+.txt-effect{opacity: 0.7;}
+/*=========Color && background ==========*/
+.c-white{color:var(--white) !important;}
+.bg-very-dark-violet{background-color: var(--Very-Dark-Violet);}
+
+ .container-full{
+    width: 100%;
+    height: auto;
+    position: relative;
+ }
+.container{
+    width: 85%;
+    position: relative;
+    margin: 0px auto;
+}
+/*backgound && color */
+  .bg-primary{background-color: var(--);}
+  .bg-white{background-color: white;}
+/*==========End Utilities===================*/
+.navbar{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-logo{
+    margin-left: 10px;
+}
+.navbar-toggler{
+    margin-right: 1.3rem;
+    background-color: transparent;
+    font-size: 1.5rem;
+    display: block;
+}
+@media (min-width:900px) {
+     .navbar-toggler{
+      display: none;
+     }
+}
+.navbar-content{
+    position: absolute;
+    z-index: 1000;
+    top: 105%;
+    width: 100%;
+    height:auto;
+    background-color: var(--Dark-Violet);
+    border-radius: 20px;
+}
+@media (min-width:900px) {
+     .navbar-content{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        border-radius: none;
+        width: auto ;
+        height: auto !important;
+        background-color: transparent;
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.navbar-content * {
+    color: var(--white);
+}
+
+
+.navbar-list{
+      width: 70%;
+      margin: 0px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid var(--Grayish-Violet);
+      font-size: 0.999rem;
+    }
+@media (min-width:900px) {
+     .navbar-list{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        align-items: center;
+        border: none;
+     }
+}
+.navbar-list-item{
+ padding: 1.1rem 0rem;
+}
+@media (min-width:900px) {
+    .navbar-list-item *{
+        margin-left: 25px;
+        color:var(--Grayish-Violet);
+    }
+
+}
+.user-account{
+   display: flex;
+   flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: 8px auto;
+}
+.user-account>button{
+    width: 100%;
+}
+@media (min-width:900px) {
+      .user-account{
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+      }
+
+      .user-account .btn:first-of-type{
+        color: var(--Grayish-Violet);
+      }
+      .user-account > button {
+        width: fit-content;
+        color: var(--white);
+      }
+}
+
+/*======the Main =======*/
+
+.description{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap:10px;
+    height: auto;
+
+}
+@media (min-width:900px) {
+    .description{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: nowrap;
+        height: 500px;
+    }
+}
+.description-img{
+    width: 100%;
+}
+@media (min-width:900px) {
+       .description-img{
+        width: 60%;
+        height: 400px;
+        margin: 0px;
+    }
+}
+.description-one{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    padding: 0.5rem 0.8rem;
+    gap: 10px;
+    align-items: center;
+}
+@media (min-width:900px) {
+   .description-one{
+        display: flex;
+        flex-direction: column;
+        width:40%;
+        min-width: 400px;
+        height: 400px;
+        margin: 0px;
+        gap: 15px;
+    }
+}
+.description-one> .description-header{
+    color: var(--Very-Dark-Violet);
+}
+@media (min-width:900px) {
+
+    .description-one>.description-header{
+        text-align: left;
+        font-size: 3.3rem;
+    }
+}
+
+.description-one>.description-body{
+    text-align: center;
+    color:var(--Grayish-Violet)
+}
+@media (min-width:900px){
+       .description-one>.description-body{
+          width: 90%;
+          align-self: flex-start;
+          font-size: 1.12rem;
+        }
+}
+.description-one>.description-btn{
+    padding: 0.6rem 1rem;
+    background-color: var(--Cyan);
+    color: var(--white);
+    font-weight: 600;
+    border-radius: 2rem;
+    font-family: var(--font-family);
+    width: fit-content;
+}
+@media (min-width:900px) {
+   .description-one>.description-body{
+    text-align: left;
+   }
+    .description-one>.description-btn{
+        margin-top: 10px;
+        width: fit-content;
+        align-self: flex-start;
+    }
+
+}
+/*_____________________Fix This Problem ___________________________*/
+
+.search-container{
+    position: absolute;
+    width: 100%;
+    bottom: -75px;
+}
+
+.search{
+   position: relative;
+   height: 50px;
+   background-color: var(--Dark-Violet);
+   border-radius: 0.5rem;
+   top: 150%;
+}
+@media (min-width:900px) {
+     .search-container{
+
+     }
+.search{
+   position: relative;
+   height: 150px;
+   background-color: var(--Dark-Violet);
+   border-radius: 0.5rem;
+   top: 150%;
+}
+
+}
+
+
+.bg-search{
+    position: absolute;
+    right:0px;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-image: url("./images/bg-shorten-mobile.svg");
+}
+@media (min-width:900px) {
+.bg-search{
+    position: absolute;
+    height: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-image: url("./images/bg-shorten-desktop.svg");
+    background-size: 100% 100%;
+}
+
+}
+.search-input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/*________________________End The Problem ________________ */
+
+
+.services-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 80%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+   padding: 2rem 1.2rem;
+   margin: 0px auto;
+   position: relative;
+}
+.card-logo{
+    width: 70px;
+    height: 70px;
+    background-color: var(--Dark-Violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -35px;
+}
+
+.card-logo>img{
+   width: 40px;
+   height: 40px;
+}
+.card-header{
+    margin-top: 30px;
+}
+/*================= Line Cyan between card ===============*/
+.Line{
+    height: 100px;
+    background-color: var(--Cyan);
+    align-self: center;
+    margin: 0px auto;
+    width: 5px;
+}
+/*===================End Line =============================*/
+
+.footer-header-container{
+    width: 100%;
+    height: 200px;
+    background-color: var(--Dark-Violet);
+    color: var(--white);
+    position: relative;
+
+}
+
+.footer-header-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/bg-boost-mobile.svg");
+    background-size: 100% 100%;
+}
+
+.footer-header{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-header>button{
+    width: 50%;
+    height: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 2rem;
+}
+
+.footer-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-body-logo{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer-logo{
+  filter: brightness(150%);
+}
+
+.footer-body-nav{
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.nav-list{
+ width: 100%;
+ color: var(--white);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ font-size: 15px;
+}
+.list-item:first-of-type{
+    font-size: 1.3rem;
+    font-weight: bold;
+
+}
+.our-account{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+/*==========Collapse Component ==========*/
+
+.collapse{
+   height: 0px;
+    overflow: hidden;
+    transform: height 0.3s ease-out;
+}
+.show{
+     animation-name:fadeIn;
+     animation-duration: 0.4s;
+     animation-fill-mode: forwards;
+     animation-timing-function: ease-out;
+}
+
+@keyframes fadeIn {
+    from{
+        height: 0px;
+    }
+    to{
+        height: auto;
+    }
+
+}
+
+
+
+/* isn't the best colllapse component */
