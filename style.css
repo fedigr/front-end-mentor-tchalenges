@@ -28,6 +28,7 @@
 body{
     font-size: var(--font-size);
     background-color: var(--light);
+    font-weight: 300;
 }
 ul{
     font-weight: 500;
@@ -53,7 +54,8 @@ ul{
 .w-80{width: 80%;}
 .m-none{margin: 0px !important;}
 .m-auto{margin: 0px auto;}
-
+/*====Cursor*/
+.cur-pointer{cursor: pointer;}
 /*==========TEXT============*/
 .txt-center{text-align: center;}
 .txt-effect{opacity: 0.7;}
@@ -275,25 +277,21 @@ ul{
     }
 
 }
-/*_____________________Fix This Problem ___________________________*/
+/*================================================*/
 
 .search-container{
     position: absolute;
     width: 100%;
-    bottom: -75px;
-}
-
-.search{
-   position: relative;
-   height: 50px;
-   background-color: var(--Dark-Violet);
-   border-radius: 0.5rem;
-   top: 150%;
+    bottom: -70px;
 }
 @media (min-width:900px) {
-     .search-container{
-
-     }
+    .search-container{
+        position: absolute;
+        width: 60%;
+        left: 20%;
+        bottom: -70px;
+    }
+}
 .search{
    position: relative;
    height: 150px;
@@ -301,28 +299,33 @@ ul{
    border-radius: 0.5rem;
    top: 150%;
 }
-
+@media (min-width:900px) {
+     .search{
+        width: 100%;
+     }
 }
-
 
 .bg-search{
     position: absolute;
     right:0px;
-    width: 100%;
+    width: 80%;
     height: 100%;
     border-radius: inherit;
     background-image: url("./images/bg-shorten-mobile.svg");
-}
-@media (min-width:900px) {
-.bg-search{
-    position: absolute;
-    height: 100%;
-    height: 100%;
-    border-radius: inherit;
-    background-image: url("./images/bg-shorten-desktop.svg");
+    background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
+@media (min-width:900px) {
+    .bg-search{
+        position: absolute;
+        right:0px;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background-image: url("./images/bg-shorten-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
 }
 .search-input{
     position: absolute;
@@ -335,9 +338,6 @@ ul{
     align-items: center;
     gap: 10px;
 }
-
-/*________________________End The Problem ________________ */
-
 
 .services-container{
     display: flex;
@@ -491,7 +491,3 @@ ul{
     }
 
 }
-
-
-
-/* isn't the best colllapse component */
