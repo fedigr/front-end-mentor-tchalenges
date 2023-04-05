@@ -1,0 +1,15 @@
+{
+  "name": "wikla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+     "wikla":"node index"
+  },
+  "keywords": [],
+  "author": "fedi grichi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
