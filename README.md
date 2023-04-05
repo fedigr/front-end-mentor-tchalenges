@@ -1,3 +1,3 @@
 ## this desgin is on front end mentor
-![A cute cat](design/desktop-preview.jpg)
 
+your can see all design in the folder design
