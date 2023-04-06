@@ -1,21 +1,25 @@
 /*
 
-||== this a very simple express server == ||
+||== this is a very simple express server == ||
 
 */
 
 let express = require("express")
 let path =  require("path")
-let app = express();
-app.use(express.static(path.join(__dirname  ,"client","js")))
+let wikla = express();
 
-app.use(express.static(path.join(__dirname  ,"client","style")))
+const parentDir = path.resolve(__dirname, '..');
+  let arr =[
+    express.static(path.join(parentDir ,"client","js")),
+    express.static(path.join(parentDir ,"client","style")),
+    express.static(path.join(parentDir,"client","assets"))
+];
 
-app.use(express.static(path.join(__dirname  ,"client","assets")))
-
-app.get("/" ,(req,res)=>{
-    res.sendFile(path.join(__dirname , "client","html" ,"index.html"))
+wikla.use(arr)
+wikla.get("/" ,(req,res)=>{
+    res.sendFile(path.join(parentDir,"client","html" ,"index.html"))
 })
-app.listen(8080 ,()=>{
+
+wikla.listen(8080 ,()=>{
     console.log("server is run")
 })
